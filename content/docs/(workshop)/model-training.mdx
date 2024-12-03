@@ -1,219 +1,219 @@
 ---
-title: Understanding Model Training
-description: Core concepts and best practices in machine learning model training
+title: Training Your First ML Model
+description: Essential concepts before starting your hands-on exercises
 ---
 
-# Understanding Model Training
+# Preparing to Train Your First ML Model
 
-## Core Concepts
+## What is Machine Learning?
 
-### What is Training?
-
-Training is how your model learns to recognize patterns:
+Think of machine learning like teaching a computer to recognize patterns:
 
 ```
-The Learning Process:
-Input Data → Feature Learning → Pattern Recognition → Predictions
+Traditional Programming:
+Rules → Computer → Output
+
+Machine Learning:
+Examples → Computer → Rules → Output
 ```
 
-### Key Components
+## How Training Works
 
-1. **Training Data**
-
-   - Examples of what to recognize
-   - Labels for each example
-   - Variations and edge cases
-
-2. **Features**
-
-   - Visual patterns
-   - Distinguishing characteristics
-   - Important differences
-
-3. **Model Learning**
-   - Pattern recognition
-   - Weight adjustment
-   - Accuracy improvement
-
-## Training Principles
-
-### 1. Data Quality
+### The Basic Process
 
 ```
-Quality Factors:
-- Clear examples
-- Good variety
-- Proper labeling
-- Relevant variations
+1. Show Examples (Training Data)
+2. Computer Finds Patterns
+3. Computer Makes Rules
+4. Test with New Examples
 ```
 
-### 2. Class Balance
+### What Happens Behind the Scenes
+
+```
+Your Role:
+- Provide clear examples
+- Label them correctly
+- Test the results
+
+Computer's Role:
+- Find patterns in data
+- Create recognition rules
+- Make predictions
+```
+
+## Preparing Your Training Data
+
+### 1. Quality Matters
+
+```
+Good Examples Are:
+✓ Clear and consistent
+✓ Well-labeled
+✓ Representative
+✓ Varied enough
+
+Bad Examples Are:
+✗ Blurry or unclear
+✗ Mislabeled
+✗ Too similar
+✗ Too different
+```
+
+### 2. Quantity Guidelines
+
+```
+For Simple Tasks:
+- Start with 10-20 examples per class
+- Add more if needed
+
+For Complex Tasks:
+- Start with 20-30 examples per class
+- Vary conditions and angles
+```
+
+### 3. Organizing Classes
 
 ```
 Best Practices:
-- Similar amounts per class
-- Representative examples
-- Cover edge cases
-- Include variations
+- Clear class names
+- Distinct categories
+- Even distribution
+- Good variety
 ```
 
-### 3. Validation Strategy
-
-```
-Testing Approach:
-- Try new examples
-- Test edge cases
-- Verify reliability
-- Check confusion
-```
-
-## Understanding Model Behavior
+## What to Expect
 
 ### 1. Confidence Scores
 
 ```
-What They Mean:
-High (90-100%): Very certain
-Medium (70-89%): Fairly sure
-Low (<70%): Uncertain
+The model shows confidence as percentages:
 
-Why It Matters:
-- Indicates reliability
-- Shows model strength
-- Helps find problems
+High (90-100%):
+"I'm very sure this is a cat!"
+
+Medium (70-89%):
+"This looks like a cat..."
+
+Low (<70%):
+"I'm not really sure..."
 ```
 
-### 2. Model Confusion
+### 2. Training Time
 
 ```
-Types of Confusion:
-- Similar features
-- Ambiguous cases
-- Overlapping classes
-- Background noise
+Factors That Affect Training:
+- Number of examples
+- Number of classes
+- Complexity of task
+- Computer speed
 ```
 
-### 3. Performance Factors
+### 3. Common Challenges
 
 ```
-What Affects Results:
-- Data quality
-- Class similarity
-- Environmental factors
-- Input variations
+You Might See:
+- Confusion between similar items
+- Lower confidence on new examples
+- Unexpected predictions
+- Need for more training data
 ```
 
-## Common Problems and Solutions
+## Before You Start
 
-### 1. Overfitting
+### Checklist for Success
 
-```
-Signs:
-- Perfect on training data
-- Poor on new examples
-- Too specific
+1. **Plan Your Classes**
 
-Solutions:
-- More varied data
-- Different conditions
-- Better examples
-```
+   - Choose clear categories
+   - Make them distinct
+   - Start simple
 
-### 2. Underfitting
+2. **Prepare Examples**
 
-```
-Signs:
-- Low confidence
-- Inconsistent results
-- Poor recognition
+   - Gather good samples
+   - Check quality
+   - Ensure variety
 
-Solutions:
-- More training data
-- Clearer examples
-- Better variety
-```
+3. **Set Expectations**
+   - Start small
+   - Test often
+   - Be patient
 
-### 3. Class Confusion
+## Your Learning Path
+
+We'll practice these concepts in three exercises, each teaching different aspects:
+
+### 1. Color Classification
 
 ```
-Signs:
-- Mixed predictions
-- Low confidence
-- Inconsistent results
-
-Solutions:
-- More distinct examples
-- Better class separation
-- Clear differences
+What You'll Learn:
+- Basic classification
+- Perfect separation
+- Clear results
 ```
 
-## Best Practices
+### 2. Shape Classification
 
-### 1. Data Collection
+```
+What You'll Learn:
+- Multiple classes
+- Similar shapes
+- Pattern recognition
+```
 
-- Start with clear examples
-- Add variations gradually
-- Include edge cases
-- Test frequently
+### 3. Hand Gestures
 
-### 2. Training Process
+```
+What You'll Learn:
+- Real-time input
+- Natural variation
+- Practical application
+```
 
-- Train in iterations
-- Test between changes
-- Document improvements
-- Track progress
+## Tips for Success
 
-### 3. Testing Strategy
+### Do's and Don'ts
 
-- Use new examples
-- Try different conditions
-- Test edge cases
-- Verify reliability
+```
+Do:
+✓ Start simple
+✓ Test frequently
+✓ Add variety gradually
+✓ Be systematic
 
-## Training Checklist
+Don't:
+✗ Rush the process
+✗ Skip testing
+✗ Use poor examples
+✗ Expect perfection
+```
 
-### Before Training
+### Remember
 
-- [ ] Clear examples ready
-- [ ] Classes balanced
-- [ ] Variations included
-- [ ] Testing plan ready
+1. **Quality Over Quantity**
 
-### During Training
+   - Better to have 10 good examples than 50 poor ones
+   - Focus on clear, representative samples
 
-- [ ] Monitor progress
-- [ ] Watch for issues
-- [ ] Note behavior
-- [ ] Keep browser open
+2. **Test as You Go**
 
-### After Training
+   - Try new examples often
+   - Add more data when needed
+   - Adjust based on results
 
-- [ ] Test thoroughly
-- [ ] Document results
-- [ ] Identify issues
-- [ ] Plan improvements
+3. **Be Patient**
+   - Learning takes time
+   - Improvement is iterative
+   - Practice makes perfect
 
-## Applying These Concepts
+## Ready to Start?
 
-Each exercise in this workshop applies these principles differently:
+Now that you understand the basics, let's begin with your first exercise: [Color Classification](/docs/first-exercise)
 
-1. **Color Classification**
+Remember:
 
-   - Perfect separation
-   - Clear confidence
-   - Binary decision
-
-2. **Shape Classification**
-
-   - Multiple classes
-   - Some ambiguity
-   - Feature similarity
-
-3. **Hand Gestures**
-   - Real-time input
-   - Natural variation
-   - Environmental factors
-
-## Next Steps
-
-Ready to apply these concepts? Return to your current exercise and use these principles to improve your model's performance!
+- Start simple
+- Follow the steps
+- Ask questions if needed
+- Have fun learning!
