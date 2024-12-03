@@ -1,0 +1,153 @@
+---
+title: Your First ML Model
+description: Building a simple color classifier with Teachable Machine
+---
+
+# Your First Machine Learning Model: Color Classification
+
+## Introduction
+
+Before we dive into complex image recognition, let's start with the simplest possible example: distinguishing between two solid colors. This exercise will help you understand the basic concepts of machine learning without any confusing variables.
+
+## Exercise Setup
+
+### What We'll Build
+
+A model that can tell the difference between:
+
+- Red images (Class 1)
+- Blue images (Class 2)
+
+### Why Colors?
+
+```
+Benefits of starting with colors:
+- No ambiguity (100% red vs 100% blue)
+- Clear separation between classes
+- No background noise
+- Perfect for understanding confidence scores
+```
+
+## Step-by-Step Guide
+
+### 1. Prepare Your Images
+
+1. **Download the Training Images**
+
+   - [Download Red Images](/workshop-files/red-squares.zip)
+   - [Download Blue Images](/workshop-files/blue-squares.zip)
+
+   Each zip file contains:
+
+   - 10 images of solid color squares
+   - Different brightness variations
+   - All in PNG format
+
+2. **Alternative: Create Your Own**
+   - Open Paint or any image editor
+   - Create a new 500x500 pixel image
+   - Fill with pure red (#FF0000)
+   - Save as PNG
+   - Repeat for blue (#0000FF)
+
+### 2. Set Up Teachable Machine
+
+1. **Create Classes**
+
+   - Rename "Class 1" to "Red"
+   - Rename "Class 2" to "Blue"
+
+2. **Upload Images**
+
+   ```
+   For "Red" class:
+   - Click "Upload"
+   - Select all red images
+   - Verify thumbnails show red squares
+
+   For "Blue" class:
+   - Click "Upload"
+   - Select all blue images
+   - Verify thumbnails show blue squares
+   ```
+
+### 3. Train Your Model
+
+1. **Start Training**
+
+   - Click "Train Model"
+   - Wait for completion (should be very quick)
+   - Observe the progress bar
+
+2. **Understanding Results**
+   ```
+   Expected Behavior:
+   Show red image → 99-100% "Red"
+   Show blue image → 99-100% "Blue"
+   ```
+
+## Testing Your Model
+
+### 1. Basic Testing
+
+Try showing the model:
+
+- A red image → Should show high confidence for "Red"
+- A blue image → Should show high confidence for "Blue"
+
+### 2. Understanding Confidence
+
+```
+Perfect Case:
+Red image:
+- Red: 100%
+- Blue: 0%
+
+Blue image:
+- Red: 0%
+- Blue: 100%
+```
+
+### 3. Try Variations
+
+Test with:
+
+- Different shades of red
+- Different shades of blue
+- Other colors (what happens?)
+
+## Learning Points
+
+### 1. Clear Separation
+
+```
+Why this works so well:
+- Red and blue are completely different
+- No overlap between classes
+- Easy for the model to distinguish
+```
+
+### 2. Confidence Scores
+
+```
+What to observe:
+- Very high confidence (near 100%)
+- Very low confusion
+- Clear decisions
+```
+
+### 3. Perfect vs Real World
+
+- This is an idealized example
+- Real-world cases are rarely this clear
+- Good for understanding basic concepts
+
+## Next Steps
+
+After mastering this basic example, we'll move on to more challenging scenarios:
+
+1. Adding a third color
+2. Using mixed colors
+3. Working with real objects
+
+Ready to try something more challenging? Move on to the [Hand Gestures](/docs/hand-gestures) exercise!
