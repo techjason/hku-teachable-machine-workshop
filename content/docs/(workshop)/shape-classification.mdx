@@ -1,0 +1,203 @@
+---
+title: Shape Classification
+description: Building a more complex classifier with shapes and introducing ambiguity
+---
+
+# Shape Classification: Handling Similar Classes
+
+## Introduction
+
+Now that you've mastered binary classification with colors, let's tackle a more challenging scenario: classifying shapes. This exercise introduces concepts like multi-class classification and dealing with similar-looking classes.
+
+## Learning Objectives
+
+By completing this exercise, you will:
+
+- Work with multiple classes (beyond binary classification)
+- Understand how models handle similar-looking inputs
+- Learn about model confusion and ambiguity
+- Experience how rotation and perspective affect classification
+- Build upon confidence score interpretation
+
+## Exercise Setup
+
+### What We'll Build
+
+A model that can distinguish between three shapes:
+
+- Circles (Class 1)
+- Squares (Class 2)
+- Octagons (Class 3)
+
+### Why These Shapes?
+
+```
+Educational Benefits:
+- Multiple classes (3 instead of 2)
+- Natural ambiguity (octagons can look like circles)
+- Rotation affects recognition
+- Perfect for understanding model confusion
+```
+
+## Step-by-Step Guide
+
+### 1. Prepare Your Training Data
+
+1. **Download the Training Images**
+
+   - [Download Circle Images](/workshop-files/circles.zip)
+   - [Download Square Images](/workshop-files/squares.zip)
+   - [Download Octagon Images](/workshop-files/octagons.zip)
+
+   Each zip contains:
+
+   - 15 images of the shape
+   - Various rotations
+   - Different sizes
+   - All in PNG format
+
+2. **Understanding the Dataset**
+   ```
+   Key Features:
+   - Circles: Perfect roundness
+   - Squares: Sharp 90° angles
+   - Octagons: 8 sides (between circle and square)
+   ```
+
+### 2. Set Up Teachable Machine
+
+1. **Create Three Classes**
+
+   - Name Class 1 "Circle"
+   - Name Class 2 "Square"
+   - Name Class 3 "Octagon"
+
+2. **Upload Training Images**
+   ```
+   For each class:
+   - Click "Upload"
+   - Select all images for that shape
+   - Verify thumbnails show correct shapes
+   ```
+
+### 3. Train Your Model
+
+1. **Training Process**
+
+   - Click "Train Model"
+   - Training will take longer than the color exercise
+   - Watch the progress bar
+
+2. **Expected Results**
+   ```
+   Typical Confidence Scores:
+   Circle → 85-95% Circle
+   Square → 90-100% Square
+   Octagon → 75-85% Octagon
+   ```
+
+## Testing and Understanding
+
+### 1. Basic Shape Testing
+
+Test with the provided images:
+
+- Show a circle → Should be highly confident
+- Show a square → Should be very confident
+- Show an octagon → Might show some confusion
+
+### 2. Understanding Confusion
+
+```
+Expected Confusion Patterns:
+Octagon might be seen as:
+- Mostly Octagon (e.g., 80%)
+- Partially Circle (e.g., 15%)
+- Rarely Square (e.g., 5%)
+
+This is normal and expected!
+```
+
+### 3. Advanced Testing
+
+Try these experiments:
+
+1. **Rotation Effects**
+
+   - Rotate squares 45° (diamond shape)
+   - Rotate octagons slightly
+   - Notice how confidence changes
+
+2. **Distance/Size Effects**
+
+   - Move shapes closer/further from camera
+   - Make shapes larger/smaller
+   - Observe confidence changes
+
+3. **Edge Cases**
+   - Show shapes at angles
+   - Test with partially visible shapes
+   - Try shapes with different thicknesses
+
+## Learning Points
+
+### 1. Multi-Class Complexity
+
+```
+Key Differences from Color Exercise:
+- More than two choices
+- Less confident predictions
+- Natural overlap between classes
+```
+
+### 2. Understanding Confusion
+
+```
+Why Confusion Happens:
+- Octagons share features with circles
+- Rotation affects recognition
+- Size and perspective matter
+```
+
+### 3. Real-World Applications
+
+This exercise demonstrates:
+
+- Why perfect accuracy isn't always possible
+- How similar classes affect confidence
+- Importance of diverse training data
+
+### 4. Key Machine Learning Concepts
+
+1. **Multi-Class Classification**
+
+   - Moving beyond yes/no decisions
+   - Handling multiple possibilities
+   - Understanding class relationships
+
+2. **Feature Similarity**
+
+   - How models handle similar inputs
+   - Impact of shared characteristics
+   - Importance of distinctive features
+
+3. **Model Confusion**
+   - Natural uncertainty
+   - Confidence distribution
+   - Acceptable confusion levels
+
+## Next Steps
+
+Now that you understand:
+
+- Binary classification (colors)
+- Multi-class classification (shapes)
+- How to handle similar classes
+
+You're ready to move on to real-world applications! In the next exercise, we'll work with hand gestures using your webcam, where you'll encounter:
+
+- Natural variation in gestures
+- Real-time classification
+- Personal differences in gesture styles
+
+Ready for real-world application? Move on to the [Hand Gestures](/docs/hand-gestures) exercise!

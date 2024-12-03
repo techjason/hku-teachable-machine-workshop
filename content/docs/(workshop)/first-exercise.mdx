@@ -9,6 +9,16 @@ description: Building a simple color classifier with Teachable Machine
 
 Before we dive into complex image recognition, let's start with the simplest possible example: distinguishing between two solid colors. This exercise will help you understand the basic concepts of machine learning without any confusing variables.
 
+## Learning Objectives
+
+By completing this exercise, you will:
+
+- Understand binary classification
+- Learn about training data and its impact
+- Experience how machine learning models make decisions
+- Interpret confidence scores
+- Prepare for more complex classification tasks
+
 ## Exercise Setup
 
 ### What We'll Build
@@ -108,13 +118,24 @@ Blue image:
 - Blue: 100%
 ```
 
-### 3. Try Variations
+### 3. Advanced Testing (Preparing for Real-World Scenarios)
 
-Test with:
+Let's explore some interesting cases:
 
-- Different shades of red
-- Different shades of blue
-- Other colors (what happens?)
+1. **Color Variations**
+
+   - Try different shades of red and blue
+   - Test with purple (mix of red and blue)
+   - Use pink (light red) and see how the model responds
+
+2. **Lighting Conditions**
+
+   - Test with brighter and darker versions
+   - Observe how confidence changes
+
+3. **Mixed Cases**
+   - Create an image that's half red, half blue
+   - Observe how the model handles uncertainty
 
 ## Learning Points
 
@@ -142,12 +163,33 @@ What to observe:
 - Real-world cases are rarely this clear
 - Good for understanding basic concepts
 
+### 4. Key Machine Learning Concepts Learned
+
+1. **Binary Classification**
+
+   - Understanding how models choose between two options
+   - Importance of distinct classes
+
+2. **Training Data Quality**
+
+   - Impact of clear, consistent training images
+   - Role of variations in training data
+
+3. **Confidence Scores**
+
+   - How models express certainty
+   - What high/low confidence means
+
+4. **Model Limitations**
+   - What happens with edge cases
+   - Preparing for more complex scenarios
+
 ## Next Steps
 
-After mastering this basic example, we'll move on to more challenging scenarios:
+This exercise used colors because they're perfectly separated. In the real world, things aren't always so clear-cut. In our next exercise, we'll work with shapes, where:
 
-1. Adding a third color
-2. Using mixed colors
-3. Working with real objects
+- We'll have more than two classes
+- Some shapes might look similar to others
+- The same shape can appear different depending on rotation
 
-Ready to try something more challenging? Move on to the [Hand Gestures](/docs/hand-gestures) exercise!
+Ready to tackle more complexity? Move on to the [Shape Classification](/docs/shape-classification) exercise!
