@@ -1,0 +1,249 @@
+---
+title: Hand Gesture Recognition
+description: Building a real-time hand gesture classifier using your webcam
+---
+
+# Real-World ML: Hand Gesture Recognition
+
+## Introduction
+
+Now that you understand classification with colors and shapes, let's build something you can use in real life: a hand gesture recognizer. This exercise brings together everything you've learned and introduces real-world challenges.
+
+## Learning Objectives
+
+By completing this exercise, you will:
+
+- Work with real-time video input
+- Handle natural variations in data
+- Deal with background noise
+- Create a practical, interactive ML model
+
+## Exercise Setup
+
+### What We'll Build
+
+A model that recognizes three hand gestures:
+
+- ✌️ Peace Sign (Victory)
+- 👍 Thumbs Up
+- ✋ Open Palm
+
+### Why These Gestures?
+
+```
+Perfect for Learning:
+- Distinct enough to recognize
+- Natural to perform
+- Different orientations
+- Common in real life
+```
+
+## Step-by-Step Guide
+
+### 1. Prepare Your Workspace
+
+1. **Setup Requirements**
+
+   - Working webcam
+   - Good lighting
+   - Plain background (if possible)
+   - Space to move your hand
+
+2. **Camera Settings**
+   ```
+   In Teachable Machine:
+   - Allow camera access
+   - Position yourself well
+   - Test camera view
+   ```
+
+### 2. Create Your Classes
+
+1. **Set Up Three Classes**
+
+   - Name Class 1 "Peace"
+   - Name Class 2 "Thumbs Up"
+   - Name Class 3 "Open Palm"
+
+2. **Add a Background Class**
+   - Name Class 4 "Background"
+   - This helps reduce false positives
+   - Captures when no gesture is shown
+
+### 3. Collect Training Data
+
+For each gesture:
+
+1. **Basic Poses**
+
+   ```
+   Record 3-5 second holds of:
+   - Front view of gesture
+   - Left and right hand
+   - Natural, comfortable poses
+   ```
+
+2. **Add Variations**
+
+   ```
+   Include different:
+   - Distances from camera
+   - Angles (45°, 90°, etc.)
+   - Hand positions
+   - Lighting conditions
+   ```
+
+3. **Background Class**
+   ```
+   Record samples of:
+   - Empty background
+   - Moving without gestures
+   - Random hand movements
+   ```
+
+### 4. Training Tips
+
+1. **Quality Over Quantity**
+
+   - Clear, intentional poses
+   - Steady recordings
+   - Various positions
+   - Good lighting
+
+2. **Common Mistakes to Avoid**
+   ```
+   Don't:
+   - Rush through poses
+   - Stay too static
+   - Ignore backgrounds
+   - Forget lighting changes
+   ```
+
+## Testing and Refinement
+
+### 1. Initial Testing
+
+Test your model with:
+
+- Both hands
+- Different speeds
+- Various distances
+- Different angles
+
+### 2. Understanding Results
+
+```
+Expected Behavior:
+Peace Sign → 70-90% confidence
+Thumbs Up → 65-85% confidence
+Open Palm → 75-90% confidence
+Background → Varies widely
+
+Note: Lower confidence than shapes/colors is normal!
+```
+
+### 3. Real-World Challenges
+
+1. **Lighting Issues**
+
+   - Test in different lighting
+   - Note when recognition fails
+   - Add more training data as needed
+
+2. **Background Noise**
+
+   - Try different backgrounds
+   - Move around while testing
+   - Check for false triggers
+
+3. **Speed and Motion**
+   - Test quick gestures
+   - Try transitioning between gestures
+   - Note any lag or confusion
+
+## Learning Points
+
+### 1. Real-World Complexity
+
+```
+Compare to Previous Exercises:
+Colors: Perfect separation
+Shapes: Controlled ambiguity
+Gestures: Natural variation
+```
+
+### 2. Understanding Variance
+
+```
+Sources of Variation:
+- Personal style
+- Hand size/shape
+- Movement speed
+- Lighting/background
+- Camera angle
+```
+
+### 3. Practical Considerations
+
+1. **User Experience**
+
+   - Response time matters
+   - Accuracy vs. speed
+   - Natural interaction
+
+2. **Environmental Factors**
+   - Lighting importance
+   - Background effects
+   - Space requirements
+
+### 4. Advanced Concepts
+
+1. **Data Collection Strategy**
+
+   - Quality vs. quantity
+   - Variation importance
+   - Background class role
+
+2. **Model Behavior**
+   - Confidence thresholds
+   - False positives
+   - Recognition speed
+
+## Making It Better
+
+### 1. Adding Robustness
+
+Try these improvements:
+
+- More lighting variations
+- Different backgrounds
+- Multiple people's hands
+- Different webcams
+
+### 2. Expanding Functionality
+
+Consider adding:
+
+- More gestures
+- Dynamic gestures
+- Combined gestures
+- Transition states
+
+## Real-World Applications
+
+Your model could be used for:
+
+- Presentation control
+- Game interfaces
+- Accessibility tools
+- Interactive installations
+
+## Next Steps
+
+Congratulations! You've now built three different models:
+
+1. Color Classifier (Perfect separation)
+2. Shape Classifier (Controlled ambiguity)
+3. Gesture Recognizer (Real-world application)
+
+Ready to explore more? Check out the [Advanced Topics](/docs/advanced) section!

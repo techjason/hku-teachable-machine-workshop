@@ -1,230 +1,219 @@
 ---
-title: Model Training
-description: Understanding how to train and evaluate your machine learning model
+title: Understanding Model Training
+description: Core concepts and best practices in machine learning model training
 ---
 
-# Training Your Machine Learning Model
+# Understanding Model Training
 
-## Understanding Model Training
+## Core Concepts
 
-### What Happens During Training?
+### What is Training?
 
-Training is the process where your model learns from your examples:
+Training is how your model learns to recognize patterns:
 
 ```
-Input → Learning → Patterns → Predictions
-Images → Neural Network → Features → Classes
+The Learning Process:
+Input Data → Feature Learning → Pattern Recognition → Predictions
 ```
 
-### The Training Process
+### Key Components
 
-1. **Initialization**
+1. **Training Data**
 
-   - Model starts fresh
-   - Random initial weights
-   - No knowledge yet
+   - Examples of what to recognize
+   - Labels for each example
+   - Variations and edge cases
 
-2. **Learning**
+2. **Features**
 
-   - Looks at examples
-   - Finds patterns
-   - Adjusts weights
-   - Improves accuracy
+   - Visual patterns
+   - Distinguishing characteristics
+   - Important differences
 
-3. **Validation**
-   - Tests on unused data
-   - Measures accuracy
-   - Identifies issues
+3. **Model Learning**
+   - Pattern recognition
+   - Weight adjustment
+   - Accuracy improvement
 
-## Training in Teachable Machine
+## Training Principles
 
-### Step 1: Prepare for Training
+### 1. Data Quality
 
-1. **Check Your Data**
+```
+Quality Factors:
+- Clear examples
+- Good variety
+- Proper labeling
+- Relevant variations
+```
 
-   - All classes have examples
-   - Images are clear
-   - Varieties included
+### 2. Class Balance
 
-2. **Review Settings**
-   - Default settings are good
-   - Advanced options available
-   - Keep it simple first
+```
+Best Practices:
+- Similar amounts per class
+- Representative examples
+- Cover edge cases
+- Include variations
+```
 
-### Step 2: Start Training
+### 3. Validation Strategy
 
-1. **Click "Train Model"**
+```
+Testing Approach:
+- Try new examples
+- Test edge cases
+- Verify reliability
+- Check confusion
+```
 
-   ```
-   Watch the progress bar
-   This may take 30-60 seconds
-   Don't close the browser
-   ```
-
-2. **During Training**
-   - Watch progress
-   - Monitor messages
-   - Wait for completion
-
-### Step 3: Initial Testing
-
-1. **Preview Panel**
-
-   - Shows live predictions
-   - Displays confidence scores
-   - Updates in real-time
-
-2. **Try Basic Tests**
-   - Show each class
-   - Try variations
-   - Note confidence levels
-
-## Understanding the Results
+## Understanding Model Behavior
 
 ### 1. Confidence Scores
 
 ```
-High Confidence (90-100%):
-- Very sure about prediction
-- Clear, typical example
+What They Mean:
+High (90-100%): Very certain
+Medium (70-89%): Fairly sure
+Low (<70%): Uncertain
 
-Medium Confidence (50-89%):
-- Somewhat sure
-- Might have variations
-
-Low Confidence (<50%):
-- Uncertain
-- Might be confused
+Why It Matters:
+- Indicates reliability
+- Shows model strength
+- Helps find problems
 ```
 
-### 2. Multiple Class Predictions
+### 2. Model Confusion
 
 ```
-Example Distribution:
-Class A: 70%
-Class B: 20%
-Class C: 10%
-Total: 100%
+Types of Confusion:
+- Similar features
+- Ambiguous cases
+- Overlapping classes
+- Background noise
 ```
 
-### 3. Reading the Results
+### 3. Performance Factors
 
-- Higher is not always better
-- Look for appropriate uncertainty
-- Consider the context
+```
+What Affects Results:
+- Data quality
+- Class similarity
+- Environmental factors
+- Input variations
+```
 
-## Common Training Issues
+## Common Problems and Solutions
 
 ### 1. Overfitting
 
 ```
-Problem: Too perfect on training data
 Signs:
-- 100% confidence always
+- Perfect on training data
 - Poor on new examples
-Solution: More varied training data
+- Too specific
+
+Solutions:
+- More varied data
+- Different conditions
+- Better examples
 ```
 
 ### 2. Underfitting
 
 ```
-Problem: Not learning well
 Signs:
 - Low confidence
-- Random predictions
-Solution: More training data or clearer examples
+- Inconsistent results
+- Poor recognition
+
+Solutions:
+- More training data
+- Clearer examples
+- Better variety
 ```
 
-### 3. Confusion
+### 3. Class Confusion
 
 ```
-Problem: Mixed up classes
 Signs:
-- Similar confidence for different classes
-- Inconsistent predictions
-Solution: Make classes more distinct
+- Mixed predictions
+- Low confidence
+- Inconsistent results
+
+Solutions:
+- More distinct examples
+- Better class separation
+- Clear differences
 ```
 
-## Practical Exercises
+## Best Practices
 
-### Exercise 1: Basic Training
+### 1. Data Collection
 
-1. **Initial Training**
-
-   - Use 20 examples per class
-   - Train the model
-   - Test basic predictions
-
-2. **Record Results**
-   - Note confidence levels
-   - Test edge cases
-   - Document issues
-
-### Exercise 2: Improvement Cycle
-
-1. **Analyze Problems**
-
-   - Identify weak points
-   - Note confusion patterns
-   - List needed improvements
-
-2. **Add Data**
-
-   - More examples where needed
-   - Different variations
-   - Problem cases
-
-3. **Retrain and Compare**
-   - Train new model
-   - Compare results
-   - Document improvements
-
-## Advanced Training Tips
-
-### 1. Iterative Improvement
-
-- Start simple
-- Test thoroughly
-- Add complexity gradually
-- Document changes
-
-### 2. Systematic Testing
-
-- Test each class
-- Try combinations
+- Start with clear examples
+- Add variations gradually
 - Include edge cases
-- Record results
+- Test frequently
 
-### 3. Performance Optimization
+### 2. Training Process
 
-- Remove poor examples
-- Balance class sizes
-- Ensure variety
-- Keep relevant features
+- Train in iterations
+- Test between changes
+- Document improvements
+- Track progress
+
+### 3. Testing Strategy
+
+- Use new examples
+- Try different conditions
+- Test edge cases
+- Verify reliability
 
 ## Training Checklist
 
 ### Before Training
 
-- [ ] Data reviewed
+- [ ] Clear examples ready
 - [ ] Classes balanced
-- [ ] Varieties included
-- [ ] Environment ready
+- [ ] Variations included
+- [ ] Testing plan ready
 
 ### During Training
 
 - [ ] Monitor progress
-- [ ] Note any warnings
+- [ ] Watch for issues
+- [ ] Note behavior
 - [ ] Keep browser open
-- [ ] Be patient
 
 ### After Training
 
-- [ ] Test each class
-- [ ] Try variations
-- [ ] Document performance
+- [ ] Test thoroughly
+- [ ] Document results
+- [ ] Identify issues
 - [ ] Plan improvements
+
+## Applying These Concepts
+
+Each exercise in this workshop applies these principles differently:
+
+1. **Color Classification**
+
+   - Perfect separation
+   - Clear confidence
+   - Binary decision
+
+2. **Shape Classification**
+
+   - Multiple classes
+   - Some ambiguity
+   - Feature similarity
+
+3. **Hand Gestures**
+   - Real-time input
+   - Natural variation
+   - Environmental factors
 
 ## Next Steps
 
-Ready to test and evaluate your model? Move on to the [Testing and Evaluation](/docs/testing) section!
+Ready to apply these concepts? Return to your current exercise and use these principles to improve your model's performance!
