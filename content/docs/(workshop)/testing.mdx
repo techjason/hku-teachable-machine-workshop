@@ -1,0 +1,254 @@
+---
+title: Testing and Evaluation
+description: How to test your model and understand its performance
+---
+
+# Testing and Evaluating Your Model
+
+## Why Testing Matters
+
+Testing helps us understand:
+
+- How well our model performs
+- Where it might fail
+- How to improve it
+- When it's ready to use
+
+## Types of Testing
+
+### 1. Real-Time Testing
+
+```
+Using the Preview Panel:
+- Live webcam feed
+- Immediate feedback
+- Quick iterations
+```
+
+### 2. Systematic Testing
+
+```
+Methodical approach:
+- Test each class
+- Try variations
+- Document results
+- Identify patterns
+```
+
+### 3. Edge Case Testing
+
+```
+Testing limits:
+- Unusual angles
+- Poor lighting
+- Partial views
+- Similar objects
+```
+
+## Understanding Model Performance
+
+### 1. Confidence Scores in Detail
+
+#### High Confidence (90-100%)
+
+- Model is very sure
+- Clear, typical example
+- Core features present
+- Good lighting and angle
+
+#### Medium Confidence (50-89%)
+
+- Model is somewhat sure
+- Some variation present
+- Features partially matched
+- Conditions not ideal
+
+#### Low Confidence (Less than 50%)
+
+- Model is uncertain
+- Multiple possible matches
+- Features unclear
+- Poor conditions
+
+### 2. Analyzing Predictions
+
+#### Good Predictions
+
+```
+Example:
+Thumbs Up → 95% confident
+Peace Sign → 2% confident
+Open Palm → 3% confident
+
+Why good?
+- Clear winner
+- Low confusion
+- Makes sense
+```
+
+#### Problematic Predictions
+
+```
+Example:
+Thumbs Up → 45% confident
+Peace Sign → 40% confident
+Open Palm → 15% confident
+
+Why problematic?
+- No clear winner
+- High confusion
+- Uncertain decision
+```
+
+## Testing Methodology
+
+### 1. Basic Testing Protocol
+
+1. **Prepare Test Cases**
+
+   - Different angles
+   - Various distances
+   - Different lighting
+   - Multiple backgrounds
+
+2. **Record Results**
+
+   ```
+   Test Case | Expected | Actual | Confidence
+   Front     | Thumbs Up| Thumbs Up| 95%
+   Side      | Thumbs Up| Confused | 60%
+   Far       | Thumbs Up| Wrong    | 30%
+   ```
+
+3. **Analyze Patterns**
+   - Where does it work well?
+   - Where does it fail?
+   - Any consistent issues?
+
+### 2. Advanced Testing
+
+#### Environmental Variations
+
+- Indoor vs outdoor lighting
+- Different times of day
+- Various backgrounds
+- Moving subjects
+
+#### User Variations
+
+- Different people
+- Different skin tones
+- Different sizes
+- Different styles
+
+#### Technical Variations
+
+- Camera angles
+- Camera quality
+- Screen brightness
+- Network speed
+
+## Common Testing Issues
+
+### 1. Overfitting Detection
+
+```
+Signs:
+- Perfect on training data
+- Poor on new examples
+- No uncertainty
+
+Solution:
+- More varied training data
+- Test with new users
+- Add variations
+```
+
+### 2. Bias Detection
+
+```
+Signs:
+- Works better for some groups
+- Consistent errors
+- Uneven performance
+
+Solution:
+- Diverse training data
+- Systematic testing
+- Regular evaluation
+```
+
+### 3. Reliability Issues
+
+```
+Signs:
+- Inconsistent results
+- Random failures
+- Environmental sensitivity
+
+Solution:
+- More robust training
+- Better documentation
+- Clear limitations
+```
+
+## Testing Checklist
+
+### Basic Testing
+
+- [ ] Test each class
+- [ ] Try different angles
+- [ ] Check lighting variations
+- [ ] Test with new users
+
+### Advanced Testing
+
+- [ ] Document edge cases
+- [ ] Test environmental factors
+- [ ] Check for biases
+- [ ] Verify consistency
+
+### Performance Analysis
+
+- [ ] Record confidence scores
+- [ ] Note failure patterns
+- [ ] Document limitations
+- [ ] Plan improvements
+
+## Practical Exercise: Systematic Testing
+
+### Exercise 1: Basic Validation
+
+1. **Test Setup**
+
+   - Prepare test cases
+   - Document conditions
+   - Set up recording sheet
+
+2. **Run Tests**
+
+   - Test each class
+   - Record results
+   - Note observations
+
+3. **Analyze Results**
+   - Calculate success rate
+   - Identify patterns
+   - Plan improvements
+
+### Exercise 2: Edge Case Testing
+
+1. **Identify Edge Cases**
+
+   - Extreme angles
+   - Poor conditions
+   - Similar objects
+
+2. **Test and Document**
+   - Run edge case tests
+   - Record results
+   - Note limitations
+
+## Next Steps
+
+Ready to explore advanced concepts? Continue to the [Advanced Concepts](/docs/advanced) section!

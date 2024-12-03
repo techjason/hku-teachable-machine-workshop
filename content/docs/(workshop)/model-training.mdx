@@ -1,0 +1,230 @@
+---
+title: Model Training
+description: Understanding how to train and evaluate your machine learning model
+---
+
+# Training Your Machine Learning Model
+
+## Understanding Model Training
+
+### What Happens During Training?
+
+Training is the process where your model learns from your examples:
+
+```
+Input → Learning → Patterns → Predictions
+Images → Neural Network → Features → Classes
+```
+
+### The Training Process
+
+1. **Initialization**
+
+   - Model starts fresh
+   - Random initial weights
+   - No knowledge yet
+
+2. **Learning**
+
+   - Looks at examples
+   - Finds patterns
+   - Adjusts weights
+   - Improves accuracy
+
+3. **Validation**
+   - Tests on unused data
+   - Measures accuracy
+   - Identifies issues
+
+## Training in Teachable Machine
+
+### Step 1: Prepare for Training
+
+1. **Check Your Data**
+
+   - All classes have examples
+   - Images are clear
+   - Varieties included
+
+2. **Review Settings**
+   - Default settings are good
+   - Advanced options available
+   - Keep it simple first
+
+### Step 2: Start Training
+
+1. **Click "Train Model"**
+
+   ```
+   Watch the progress bar
+   This may take 30-60 seconds
+   Don't close the browser
+   ```
+
+2. **During Training**
+   - Watch progress
+   - Monitor messages
+   - Wait for completion
+
+### Step 3: Initial Testing
+
+1. **Preview Panel**
+
+   - Shows live predictions
+   - Displays confidence scores
+   - Updates in real-time
+
+2. **Try Basic Tests**
+   - Show each class
+   - Try variations
+   - Note confidence levels
+
+## Understanding the Results
+
+### 1. Confidence Scores
+
+```
+High Confidence (90-100%):
+- Very sure about prediction
+- Clear, typical example
+
+Medium Confidence (50-89%):
+- Somewhat sure
+- Might have variations
+
+Low Confidence (<50%):
+- Uncertain
+- Might be confused
+```
+
+### 2. Multiple Class Predictions
+
+```
+Example Distribution:
+Class A: 70%
+Class B: 20%
+Class C: 10%
+Total: 100%
+```
+
+### 3. Reading the Results
+
+- Higher is not always better
+- Look for appropriate uncertainty
+- Consider the context
+
+## Common Training Issues
+
+### 1. Overfitting
+
+```
+Problem: Too perfect on training data
+Signs:
+- 100% confidence always
+- Poor on new examples
+Solution: More varied training data
+```
+
+### 2. Underfitting
+
+```
+Problem: Not learning well
+Signs:
+- Low confidence
+- Random predictions
+Solution: More training data or clearer examples
+```
+
+### 3. Confusion
+
+```
+Problem: Mixed up classes
+Signs:
+- Similar confidence for different classes
+- Inconsistent predictions
+Solution: Make classes more distinct
+```
+
+## Practical Exercises
+
+### Exercise 1: Basic Training
+
+1. **Initial Training**
+
+   - Use 20 examples per class
+   - Train the model
+   - Test basic predictions
+
+2. **Record Results**
+   - Note confidence levels
+   - Test edge cases
+   - Document issues
+
+### Exercise 2: Improvement Cycle
+
+1. **Analyze Problems**
+
+   - Identify weak points
+   - Note confusion patterns
+   - List needed improvements
+
+2. **Add Data**
+
+   - More examples where needed
+   - Different variations
+   - Problem cases
+
+3. **Retrain and Compare**
+   - Train new model
+   - Compare results
+   - Document improvements
+
+## Advanced Training Tips
+
+### 1. Iterative Improvement
+
+- Start simple
+- Test thoroughly
+- Add complexity gradually
+- Document changes
+
+### 2. Systematic Testing
+
+- Test each class
+- Try combinations
+- Include edge cases
+- Record results
+
+### 3. Performance Optimization
+
+- Remove poor examples
+- Balance class sizes
+- Ensure variety
+- Keep relevant features
+
+## Training Checklist
+
+### Before Training
+
+- [ ] Data reviewed
+- [ ] Classes balanced
+- [ ] Varieties included
+- [ ] Environment ready
+
+### During Training
+
+- [ ] Monitor progress
+- [ ] Note any warnings
+- [ ] Keep browser open
+- [ ] Be patient
+
+### After Training
+
+- [ ] Test each class
+- [ ] Try variations
+- [ ] Document performance
+- [ ] Plan improvements
+
+## Next Steps
+
+Ready to test and evaluate your model? Move on to the [Testing and Evaluation](/docs/testing) section!

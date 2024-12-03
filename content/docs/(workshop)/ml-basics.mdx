@@ -1,0 +1,147 @@
+---
+title: Machine Learning Basics
+description: Understanding the fundamentals of Machine Learning
+---
+
+# Understanding Machine Learning
+
+## What is Machine Learning?
+
+Machine Learning (ML) is a branch of artificial intelligence that enables computers to learn from examples rather than being explicitly programmed. Think of it like teaching a child:
+
+- **Traditional Programming**:
+
+  ```
+  IF (sees_round_orange_object) AND (has_bumpy_texture) THEN "it's an orange"
+  ```
+
+- **Machine Learning**:
+  Show many examples of oranges and non-oranges, and let the computer learn the patterns
+
+## Key Concepts
+
+### 1. Pattern Recognition
+
+- Computers learn to recognize patterns in data
+- These patterns can be in:
+  - Images (what we'll work with)
+  - Sound
+  - Text
+  - Numbers
+  - Any type of data
+
+### 2. Learning from Examples
+
+Instead of writing rules, we:
+
+1. Collect examples (data)
+2. Label them (training data)
+3. Let the computer find patterns
+4. Use these patterns to make predictions
+
+### 3. Types of Machine Learning
+
+#### Supervised Learning
+
+- What we'll use in Teachable Machine
+- We provide labeled examples
+- Computer learns to predict labels for new examples
+- Examples:
+  - Image classification
+  - Spam detection
+  - Face recognition
+
+#### Unsupervised Learning
+
+- Computer finds patterns without labels
+- Discovers natural groupings in data
+- Examples:
+  - Customer segmentation
+  - Anomaly detection
+
+#### Reinforcement Learning
+
+- Learning through trial and error
+- Like training a pet with rewards
+- Examples:
+  - Game playing AI
+  - Robot navigation
+
+## How Computers "See" Images
+
+### Digital Images
+
+1. **Pixels**
+
+   - Images are grids of numbers
+   - Each pixel has color values (RGB)
+   - Example:
+     ```
+     Red pixel: [255, 0, 0]
+     Green pixel: [0, 255, 0]
+     Blue pixel: [0, 0, 255]
+     ```
+
+2. **Features**
+   - Patterns of pixels
+   - Edges, corners, textures
+   - Colors and shapes
+   - Combinations of simpler features
+
+### From Pixels to Predictions
+
+1. Image input → Grid of numbers
+2. Find important features
+3. Learn which features match which classes
+4. Make predictions based on features
+
+## The Learning Process
+
+### 1. Training Phase
+
+- Show labeled examples
+- Computer adjusts internal parameters
+- Learns to recognize patterns
+- Gets better with more examples
+
+### 2. Testing Phase
+
+- Show new, unseen examples
+- Computer makes predictions
+- We evaluate accuracy
+- Identify areas for improvement
+
+## Why Machine Learning?
+
+### Advantages
+
+- Can handle complex patterns
+- Adapts to new data
+- Works with unstructured data
+- Automates pattern recognition
+
+### Limitations
+
+- Needs good quality data
+- Can be computationally intensive
+- May learn unwanted biases
+- Not good for simple, rule-based tasks
+
+## Practical Exercise
+
+Before moving on, try this thought exercise:
+
+1. Think of how you recognize a cat:
+
+   - What features do you look for?
+   - How many examples did you need to learn?
+   - How do you handle variations?
+
+2. Now imagine teaching a computer:
+   - What features might it need?
+   - How many examples would help?
+   - What variations should we include?
+
+## Next Steps
+
+Ready to start working with classes and features? Continue to the [Classes and Features](/docs/classes-features) section!

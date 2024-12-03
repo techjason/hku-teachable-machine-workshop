@@ -1,0 +1,195 @@
+---
+title: Classes and Features
+description: Understanding classification and feature extraction in Machine Learning
+---
+
+# Classes and Features in Machine Learning
+
+## Understanding Classes
+
+### What is a Class?
+
+A class is a category or label we want our model to recognize. Think of it as a bucket where we group similar items:
+
+```
+Class: "Cat"
+Examples: different cats, different angles, different colors
+```
+
+### Characteristics of Good Classes
+
+1. **Distinct and Clear**
+
+   - Clear boundaries between classes
+   - Minimal overlap with other classes
+   - Example: "Smiling" vs "Frowning" are distinct facial expressions
+
+2. **Consistent Internal Patterns**
+
+   - Similar features within the class
+   - Recognizable patterns
+   - Example: All "thumbs up" gestures share a basic shape
+
+3. **Practical Size**
+   - Not too broad: "Any object" is too general
+   - Not too narrow: "My cat on Mondays" is too specific
+
+## Understanding Features
+
+### What are Features?
+
+Features are the distinctive characteristics that help identify a class:
+
+1. **Visual Features**
+
+   - Shapes
+   - Colors
+   - Textures
+   - Edges
+   - Patterns
+
+2. **Abstract Features**
+   - Spatial relationships
+   - Proportions
+   - Symmetry
+   - Movement patterns
+
+### How Computers Process Features
+
+1. **Low-Level Features**
+
+   ```
+   - Edge detection
+   - Color distribution
+   - Basic shapes
+   ```
+
+2. **Mid-Level Features**
+
+   ```
+   - Combinations of edges
+   - Texture patterns
+   - Local structures
+   ```
+
+3. **High-Level Features**
+   ```
+   - Complex patterns
+   - Object parts
+   - Spatial relationships
+   ```
+
+## Practical Workshop Exercise
+
+### Exercise 1: Creating Distinct Classes
+
+Let's create three classes with clear differences:
+
+1. **"Thumbs Up"**
+
+   - Clear shape
+   - Consistent angle
+   - Good lighting
+
+2. **"Peace Sign"**
+
+   - V-shape with fingers
+   - Different from thumbs up
+   - Easy to distinguish
+
+3. **"Open Palm"**
+   - All fingers extended
+   - Flat hand position
+   - Distinct from other gestures
+
+### Exercise 2: Understanding Feature Variation
+
+For each class, we'll explore variations:
+
+1. **Position Variations**
+
+   - Center frame
+   - Slightly left/right
+   - Different distances
+
+2. **Lighting Variations**
+
+   - Normal lighting
+   - Brighter conditions
+   - Dimmer conditions
+
+3. **Background Variations**
+   - Plain background
+   - Different colors
+   - Slight clutter
+
+## Common Pitfalls
+
+### 1. Class Confusion
+
+```
+Problem: Similar classes
+Example: "Slight Smile" vs "Big Smile"
+Solution: Make classes more distinct
+```
+
+### 2. Inconsistent Features
+
+```
+Problem: Too much variation
+Example: Hand gestures at very different angles
+Solution: Standardize key features
+```
+
+### 3. Background Dependence
+
+```
+Problem: Model learns background instead of object
+Example: All "thumbs up" photos taken against white wall
+Solution: Vary backgrounds during training
+```
+
+## Best Practices
+
+### 1. Class Selection
+
+- Choose clearly different classes
+- Start with 2-3 classes
+- Add complexity gradually
+
+### 2. Feature Consistency
+
+- Maintain core features
+- Vary non-essential features
+- Document key characteristics
+
+### 3. Training Data
+
+- Capture variety within constraints
+- Include edge cases
+- Keep classes balanced
+
+## Hands-on Exercise
+
+Let's create a robust hand gesture classifier:
+
+1. **Setup Classes**
+
+   - Create three classes as described above
+   - Name them clearly
+   - Plan variations
+
+2. **Collect Initial Data**
+
+   - 20 images per class
+   - Vary position slightly
+   - Keep lighting consistent
+
+3. **Test and Analyze**
+   - Train initial model
+   - Test with new examples
+   - Identify confusion points
+
+## Next Steps
+
+Ready to start collecting training data? Move on to the [Training Data](/docs/training-data) section!

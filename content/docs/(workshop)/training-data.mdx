@@ -1,0 +1,222 @@
+---
+title: Training Data
+description: Understanding and collecting quality training data for your ML model
+---
+
+# Training Data: The Foundation of Machine Learning
+
+## What is Training Data?
+
+Training data is the set of examples we use to teach our machine learning model. Think of it as the "textbook" from which your model learns:
+
+```
+Training Data = Examples + Labels
+Example: Image of a cat + Label "Cat"
+```
+
+## Quality vs. Quantity
+
+### The Balance
+
+```
+Better to have:
+100 high-quality examples
+than
+1000 poor-quality examples
+```
+
+### Quality Factors
+
+1. **Clarity**
+
+   - Clear subject
+   - Good lighting
+   - In focus
+   - Minimal noise
+
+2. **Relevance**
+
+   - Shows key features
+   - Represents real use cases
+   - Appropriate context
+
+3. **Variety**
+   - Different angles
+   - Different conditions
+   - Different backgrounds
+
+## Data Collection Best Practices
+
+### 1. Planning Your Collection
+
+#### Before Starting:
+
+- Define clear classes
+- Plan variety needed
+- Set up good conditions
+- Prepare backgrounds
+
+#### Minimum Requirements:
+
+```
+Per Class:
+- At least 20 examples
+- 5 different angles
+- 3 different distances
+- 2 lighting conditions
+```
+
+### 2. Capturing Quality Data
+
+#### Camera Setup
+
+- Clean lens
+- Stable position
+- Good lighting
+- Neutral background
+
+#### Subject Position
+
+- Center frame
+- Appropriate distance
+- Clear visibility
+- Consistent pose
+
+### 3. Organizing Your Data
+
+#### Structure:
+
+```
+Class 1/
+  ├── front_view/
+  ├── side_view/
+  └── varied_lighting/
+Class 2/
+  ├── front_view/
+  ├── side_view/
+  └── varied_lighting/
+```
+
+## Practical Exercise: Data Collection
+
+### Exercise 1: Basic Collection
+
+1. **Setup**
+
+   - Clear workspace
+   - Position camera
+   - Check lighting
+   - Prepare backgrounds
+
+2. **For Each Class**
+
+   - Record 20 examples
+   - Vary slightly:
+     - Position
+     - Angle
+     - Expression
+
+3. **Review Quality**
+   - Check each image
+   - Remove blurry ones
+   - Ensure variety
+   - Maintain balance
+
+### Exercise 2: Adding Variations
+
+1. **Position Variations**
+
+   ```
+   - Center (10 images)
+   - Slightly left (5 images)
+   - Slightly right (5 images)
+   ```
+
+2. **Distance Variations**
+
+   ```
+   - Normal distance (10 images)
+   - Closer (5 images)
+   - Further (5 images)
+   ```
+
+3. **Lighting Variations**
+   ```
+   - Normal lighting (10 images)
+   - Brighter (5 images)
+   - Dimmer (5 images)
+   ```
+
+## Common Data Collection Mistakes
+
+### 1. Insufficient Variety
+
+```
+Problem: All photos too similar
+Impact: Model doesn't generalize
+Solution: Deliberately vary conditions
+```
+
+### 2. Class Imbalance
+
+```
+Problem: Different amounts per class
+Impact: Biased predictions
+Solution: Keep classes balanced
+```
+
+### 3. Background Dependence
+
+```
+Problem: Consistent background
+Impact: Model learns background
+Solution: Vary backgrounds
+```
+
+## Advanced Data Collection
+
+### 1. Edge Cases
+
+- Unusual angles
+- Extreme lighting
+- Partial visibility
+- Motion blur
+
+### 2. Negative Examples
+
+- Similar but different
+- Common confusions
+- Border cases
+
+### 3. Validation Data
+
+- Separate from training
+- Different conditions
+- Real-world scenarios
+
+## Data Collection Checklist
+
+### Before Collection
+
+- [ ] Classes defined
+- [ ] Equipment ready
+- [ ] Environment prepared
+- [ ] Plan for variations
+
+### During Collection
+
+- [ ] Check quality
+- [ ] Monitor variety
+- [ ] Balance classes
+- [ ] Document conditions
+
+### After Collection
+
+- [ ] Review all data
+- [ ] Remove poor examples
+- [ ] Verify balance
+- [ ] Test representative samples
+
+## Next Steps
+
+Ready to train your model? Move on to the [Model Training](/docs/model-training) section!

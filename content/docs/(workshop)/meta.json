@@ -1,0 +1,13 @@
+{
+  "title": "Workshop",
+  "pages": [
+    "getting-started",
+    "ml-basics",
+    "classes-features",
+    "training-data",
+    "model-training",
+    "testing",
+    "advanced",
+    "applications"
+  ]
+}

@@ -3,6 +3,7 @@ import { ArrowDownRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -23,9 +24,11 @@ const Hero = () => {
               for beginners - no coding required.
             </p>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              <Button className="w-full sm:w-auto">
-                Start Workshop <ArrowDownRight className="size-4" />
-              </Button>
+              <Link href="/docs">
+                <Button className="w-full sm:w-auto">
+                  Start Workshop <ArrowDownRight className="size-4" />
+                </Button>
+              </Link>
             </div>
           </div>
           <Image
