@@ -101,7 +101,7 @@ Instead of writing rules, we:
 />
 ## How Computers "See" Images
 
-### Digital Images
+When computers process images, they don't "see" like we do. Instead, they work with a grid of numbers representing pixel values. Each pixel contains information about color intensity, typically in RGB (Red, Green, Blue) format. For example, a bright red pixel might be represented as [255, 0, 0], while a dark blue would be [0, 0, 100]. Machine learning models analyze these numerical patterns to identify objects and features within images.
 
 1. **Pixels**
 
@@ -115,10 +115,8 @@ Instead of writing rules, we:
      ```
 
 2. **Features**
-   - Patterns of pixels
-   - Edges, corners, textures
-   - Colors and shapes
-   - Combinations of simpler features
+
+Features are the building blocks that machine learning models use to understand images. At the most basic level, they start with patterns of pixels - recurring arrangements of color values that might indicate something meaningful. The model then identifies key visual elements like edges where colors change sharply, corners where edges meet, and textures that show repeating patterns. It also analyzes colors and shapes, looking for distinctive hues and geometric forms that could help identify objects. These simpler features are then combined into more complex patterns - for example, several edges might form the outline of an object, while combinations of colors and textures could indicate specific materials or surfaces.
 
 ### From Pixels to Predictions
 
