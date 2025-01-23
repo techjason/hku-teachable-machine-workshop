@@ -44,40 +44,23 @@ Computers learn to recognize patterns in data. These patterns can be in:
 
 Instead of writing rules, we:
 
-1. Collect examples (data)
-2. Label them (training data)
-3. Let the computer find patterns
-4. Use these patterns to make predictions
+1. Collect examples (data) → 2. Label them (training data) → 3. Let the computer find patterns → 4. Use these patterns to make predictions
 
-![Image](/ml-pipeline.png)
+<figure>
+  ![Image](/ml-pipeline.png)
+  <figcaption className="text-sm text-gray-500 text-center">
+    A typical supervised learning pipeline: collecting data, training the model,
+    and making predictions
+  </figcaption>
+</figure>
 
 ### 3. Types of Machine Learning
 
-#### Supervised Learning
-
-- What we'll use in Teachable Machine
-- We provide labeled examples
-- Computer learns to predict labels for new examples
-- Examples:
-  - Image classification
-  - Spam detection
-  - Face recognition
-
-#### Unsupervised Learning
-
-- Computer finds patterns without labels
-- Discovers natural groupings in data
-- Examples:
-  - Customer segmentation
-  - Anomaly detection
-
-#### Reinforcement Learning
-
-- Learning through trial and error
-- Like training a pet with rewards
-- Examples:
-  - Game playing AI
-  - Robot navigation
+| Type                   | Description                                                                                                                      | Examples                                                           |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Supervised Learning    | - What we'll use in Teachable Machine<br/>- We provide labeled examples<br/>- Computer learns to predict labels for new examples | - Image classification<br/>- Spam detection<br/>- Face recognition |
+| Unsupervised Learning  | - Computer finds patterns without labels<br/>- Discovers natural groupings in data                                               | - Customer segmentation<br/>- Anomaly detection                    |
+| Reinforcement Learning | - Learning through trial and error<br/>- Like training a pet with rewards                                                        | - Game playing AI<br/>- Robot navigation                           |
 
 ## How Computers "See" Images
 
