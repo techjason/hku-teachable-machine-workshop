@@ -9,6 +9,8 @@ import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { SAQQuiz } from "@/components/SAQQuiz";
+import { MCQQuiz } from "@/components/MCQQuiz";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -31,6 +33,8 @@ export default async function Page(props: {
             img: (props) => <ImageZoom {...(props as any)} />,
             Accordion,
             Accordions,
+            SAQQuiz,
+            MCQQuiz,
           }}
         />
       </DocsBody>
