@@ -44,16 +44,24 @@ Benefits of starting with colors:
 
 ### 1. Prepare Your Images
 
-**Download the Training Images**
+**Download the Datasets**
 
 {" "}
-<DownloadButton url="/assets/colours.zip" label="Download Color Images" />
 
-The zip file contains:
+<DownloadButton url="/assets/colours.zip" label="Download Training Images" /> <DownloadButton
+  url="/assets/colours-test.zip"
+  label="Download Testing Images"
+/>
 
-- Red and blue square images
-- Different brightness variations
-- All in PNG format
+The datasets contain:
+
+- **Training set**: Images used to teach your model (what the model learns from)
+- **Testing set**: New images to evaluate your model's performance (what the model hasn't seen before)
+- Different brightness variations of red and blue squares
+- All images in PNG format
+
+> **Why separate training and testing data?**  
+> In machine learning, we always separate our data into training and testing sets. The training data teaches the model, while the testing data evaluates how well it generalizes to new examples. This helps prevent overfitting (when a model performs well on training data but poorly on new data).
 
 ### 2. Set Up Teachable Machine
 
