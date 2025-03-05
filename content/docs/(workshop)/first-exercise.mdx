@@ -49,15 +49,14 @@ Benefits of starting with colors:
 {" "}
 
 <DownloadButton url="/assets/colours.zip" label="Download Training Images" /> <DownloadButton
-  url="/assets/colours-test.zip"
+  url="/assets/testing-colours.zip"
   label="Download Testing Images"
 />
 
 The datasets contain:
 
-- **Training set**: Images used to teach your model (what the model learns from)
-- **Testing set**: New images to evaluate your model's performance (what the model hasn't seen before)
-- Different brightness variations of red and blue squares
+- **Training set**: Simple red and blue squares with different brightness variations (what the model learns from)
+- **Testing set**: A variety of red and blue images to evaluate your model's performance (what the model hasn't seen before)
 - All images in PNG format
 
 > **Why separate training and testing data?**  
@@ -69,6 +68,13 @@ The datasets contain:
 
    - Rename "Class 1" to "Red"
    - Rename "Class 2" to "Blue"
+
+<figure>
+  ![Image](/screenshots/task1-step-1.png)
+  <figcaption className="text-sm text-gray-500 text-center">
+    Set both classes as "Red" & "Blue"
+  </figcaption>
+</figure>
 
 2. **Upload Images**
 
@@ -84,31 +90,108 @@ The datasets contain:
    - Verify thumbnails show blue squares
    ```
 
+<figure>
+  ![Image](/screenshots/task1-step-2.png)
+  <figcaption className="text-sm text-gray-500 text-center">
+    Upload all red and blue images by clicking the "Upload" button
+  </figcaption>
+</figure>
+
 ### 3. Train Your Model
 
-1. **Start Training**
+- Click "Train Model"
+- Wait for completion (should be very quick)
+- Observe the progress bar
 
-   - Click "Train Model"
-   - Wait for completion (should be very quick)
-   - Observe the progress bar
-
-2. **Understanding Results**
-   ```
-   Expected Behavior:
-   Show red image → 99-100% "Red"
-   Show blue image → 99-100% "Blue"
-   ```
+<figure>
+  ![Image](/screenshots/task1-step-3.png)
+  <figcaption className="text-sm text-gray-500 text-center">
+    Click "Train Model" to start training
+  </figcaption>
+</figure>
 
 ## Testing Your Model
 
 ### 1. Basic Testing
 
-Try showing the model:
+First, test your model with the training images:
 
-- A red image → Should show high confidence for "Red"
-- A blue image → Should show high confidence for "Blue"
+- A red square → Should show high confidence for "Red"
+- A blue square → Should show high confidence for "Blue"
 
-### 2. Understanding Confidence
+### 2. Advanced Testing with Real-World Images
+
+Now, let's test with the more challenging images from the testing dataset:
+
+1. **Slightly Different Red Square**
+
+   - This is similar to our training data but with a slightly different shade
+   - The model should still classify it as "Red" with high confidence
+   - This tests basic generalization within the same color family
+
+<figure>
+  ![Image](/screenshots/task1-step-4.png)
+  <figcaption className="text-sm text-gray-500 text-center">
+    Test the model with a slightly different red square
+  </figcaption>
+</figure>
+
+2. **Strawberry Image**
+
+   - A real-world red object
+   - Does the model recognize "redness" in natural objects?
+   - Observe if the confidence is lower than with the plain squares
+
+<figure>
+  ![Image](/screenshots/task1-step-5.png)
+  <figcaption className="text-sm text-gray-500 text-center">
+    Test the model with a strawberry image
+  </figcaption>
+</figure>
+
+3. **Blueberry Image**
+
+   - A real-world blue object
+   - Does the model recognize "blueness" in natural objects?
+   - Compare the confidence level with the plain blue squares
+
+<figure>
+  ![Image](/screenshots/task1-step-6.png)
+  <figcaption className="text-sm text-gray-500 text-center">
+    Test the model with a blueberry image
+  </figcaption>
+</figure>
+
+4. **Purple Flower**
+
+   - An ambiguous case between red and blue
+   - Which class does the model choose?
+   - Look at the confidence scores - they should be more balanced
+   - This tests the model's decision boundary between red and blue
+
+<figure>
+  ![Image](/screenshots/task1-step-7.png)
+  <figcaption className="text-sm text-gray-500 text-center">
+    Test the model with a purple flower image
+  </figcaption>
+</figure>
+
+5. **Magnolia Flag**
+   - Contains both red and blue elements
+   - How does the model handle an image with both classes?
+   - The prediction may depend on which color is more dominant
+   - This reveals limitations in simple classification models
+
+<figure>
+  ![Image](/screenshots/task1-step-8.png)
+  <figcaption className="text-sm text-gray-500 text-center">
+    Test the model with a magnolia flag image
+  </figcaption>
+</figure>
+
+> **Learning Point:** Notice how the model's confidence decreases as we move from simple squares to complex real-world objects. This demonstrates an important concept in machine learning: models perform best on data similar to what they were trained on.
+
+### 3. Understanding Confidence
 
 ```
 Perfect Case:
@@ -121,71 +204,53 @@ Blue image:
 - Blue: 100%
 ```
 
-### 3. Advanced Testing (Preparing for Real-World Scenarios)
-
-Let's explore some interesting cases:
-
-1. **Color Variations**
-
-   - Try different shades of red and blue
-   - Test with purple (mix of red and blue)
-   - Use pink (light red) and see how the model responds
-
-2. **Lighting Conditions**
-
-   - Test with brighter and darker versions
-   - Observe how confidence changes
-
-3. **Mixed Cases**
-   - Create an image that's half red, half blue
-   - Observe how the model handles uncertainty
-
 ## Learning Points
 
-### 1. Clear Separation
+### 1. Clear Separation vs. Real-World Complexity
 
 ```
-Why this works so well:
-- Red and blue are completely different
-- No overlap between classes
-- Easy for the model to distinguish
+What we learned:
+- Simple squares: Clear separation between classes
+- Real-world objects: More complex features and variations
+- The gap between idealized training and real-world application
 ```
 
-### 2. Confidence Scores
+### 2. Confidence Scores and Uncertainty
 
 ```
 What to observe:
-- Very high confidence (near 100%)
-- Very low confusion
-- Clear decisions
+- High confidence on training-like data
+- Lower confidence on real-world objects
+- Uncertainty with ambiguous cases (purple, mixed images)
+- How confidence reflects model reliability
 ```
 
-### 3. Perfect vs Real World
+### 3. Generalization
 
-- This is an idealized example
-- Real-world cases are rarely this clear
-- Good for understanding basic concepts
+- The model's ability to apply learning to new examples
+- Limitations when test data differs significantly from training data
+- The importance of diverse, representative training examples
 
 ### 4. Key Machine Learning Concepts Learned
 
 1. **Binary Classification**
 
    - Understanding how models choose between two options
-   - Importance of distinct classes
+   - Observing decision boundaries between classes
 
-2. **Training Data Quality**
+2. **Training vs. Testing Data**
 
-   - Impact of clear, consistent training images
-   - Role of variations in training data
+   - Why we separate data into different sets
+   - How to evaluate model performance on unseen data
 
-3. **Confidence Scores**
+3. **Feature Recognition**
 
-   - How models express certainty
-   - What high/low confidence means
+   - How models identify "redness" and "blueness" beyond simple squares
+   - The challenge of extracting relevant features from complex images
 
 4. **Model Limitations**
-   - What happens with edge cases
-   - Preparing for more complex scenarios
+   - What happens with edge cases and ambiguous examples
+   - How to interpret and understand model predictions
 
 ## Next Steps
 
