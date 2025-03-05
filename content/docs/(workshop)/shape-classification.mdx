@@ -3,6 +3,8 @@ title: Shape Classification
 description: Building a more complex classifier with shapes and introducing ambiguity
 ---
 
+import { DownloadButton } from "@/components/DownloadButton";
+
 # Shape Classification: Handling Similar Classes
 
 ## Introduction
@@ -29,32 +31,27 @@ A model that can distinguish between three shapes:
 - Squares (Class 2)
 - Octagons (Class 3)
 
-### Why These Shapes?
-
-```
-Educational Benefits:
-- Multiple classes (3 instead of 2)
-- Natural ambiguity (octagons can look like circles)
-- Rotation affects recognition
-- Perfect for understanding model confusion
-```
-
 ## Step-by-Step Guide
 
 ### 1. Prepare Your Training Data
 
-1. **Download the Training Images**
+**Download the Datasets**
 
-   - [Download Circle Images](/workshop-files/circles.zip)
-   - [Download Square Images](/workshop-files/squares.zip)
-   - [Download Octagon Images](/workshop-files/octagons.zip)
+{" "}
 
-   Each zip contains:
+<DownloadButton url="/assets/shapes.zip" label="Download Training Images" /> <DownloadButton
+  url="/assets/testing-shapes.zip"
+  label="Download Testing Images"
+/>
 
-   - 15 images of the shape
-   - Various rotations
-   - Different sizes
-   - All in PNG format
+The datasets contain:
+
+- **Training set**: Basic shape variations for training your model
+- **Testing set**: Challenging shapes to evaluate your model's performance
+- All images in PNG format
+
+> **Why these testing images?**  
+> The testing images include ambiguous cases, rotated shapes, and real-world objects that will challenge your model and demonstrate important concepts like decision boundaries and generalization.
 
 2. **Understanding the Dataset**
    ```
@@ -120,24 +117,39 @@ This is normal and expected!
 
 ### 3. Advanced Testing
 
-Try these experiments:
+Try these experiments with the testing images:
 
-1. **Rotation Effects**
+1. **Ambiguous Octagon-Circle Hybrid**
 
-   - Rotate squares 45° (diamond shape)
-   - Rotate octagons slightly
-   - Notice how confidence changes
+   - A shape with many sides that looks almost like a circle
+   - Observe how confidence is distributed between classes
+   - This demonstrates decision boundaries between similar shapes
 
-2. **Distance/Size Effects**
+2. **Rotated Square (Diamond)**
 
-   - Move shapes closer/further from camera
-   - Make shapes larger/smaller
-   - Observe confidence changes
+   - A perfect square rotated 45°
+   - Does the model still recognize it as a square?
+   - This shows the importance of rotation-invariant features
 
-3. **Edge Cases**
-   - Show shapes at angles
-   - Test with partially visible shapes
-   - Try shapes with different thicknesses
+3. **Real-World Object Collage**
+
+   - Multiple shapes in one image
+   - How does the model handle complex scenes?
+   - This reveals limitations of simple classification
+
+4. **Perspective-Distorted Square**
+
+   - A square viewed from an angle
+   - Tests if the model can handle perspective distortion
+   - Demonstrates challenges of real-world perception
+
+5. **Incomplete/Partial Shape**
+   - Half of a circle or other partial shape
+   - Tests how the model handles incomplete information
+   - Shows robustness to occlusion or cropping
+   - **Interesting observation**: The partial circle is often recognized as an octagon! Think about why this might happen.
+
+> **Discussion Point**: Why might a partial circle be classified as an octagon rather than a circle sometimes?
 
 ## Learning Points
 
